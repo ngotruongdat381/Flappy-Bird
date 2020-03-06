@@ -121,10 +121,10 @@ class playGame extends Phaser.Scene{
     }
     die(){
         localStorage.setItem(gameOptions.localStorageName, Math.max(this.score, this.topScore));
-        // this.scene.start('PlayGame');
-        this.scene.pause();
-        this.input.on('pointerdown', function() {
-            this.scene.start('PlayGame');
-        }, this);
+        this.scene.start('PlayGame');
+        // this.scene.pause();
+        // this.input.on('pointerdown', function() {
+        //     this.scene.start('PlayGame');
+        // }, this);
     }
 }
